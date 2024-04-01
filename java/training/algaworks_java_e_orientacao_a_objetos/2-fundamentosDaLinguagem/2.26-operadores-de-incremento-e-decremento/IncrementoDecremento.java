@@ -19,7 +19,7 @@ public class IncrementoDecremento {
 		System.out.println(valor3);
 
 		// forma 4;
-		// esta forma irá entragar o valor 10 para a variavel "resultValor4" e depois ira fazer o incremento;
+		// esta forma irï¿½ entragar o valor 10 para a variavel "resultValor4" e depois ira fazer o incremento;
 		int valor4 = 10;
 		int resultValor4 = valor4++;
 		System.out.println(valor4);
@@ -28,6 +28,7 @@ public class IncrementoDecremento {
 		// forma 5;
 		int valor5 = 10;
 		int resultValor5 = ++valor5;
+		System.out.println(valor5);
 		System.out.println(resultValor5);
 
 
