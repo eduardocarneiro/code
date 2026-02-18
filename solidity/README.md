@@ -10,6 +10,8 @@ Este documento detalha o roteiro de estudos para o desenvolvimento de Smart Cont
 * **Blockchain Programming Fundamentals: Ethereum and Solidity**
     * [Acesse na Udemy](https://www.udemy.com/course/blockchain-programming-fundamentals-ethereum-and-solidity/)
 
+* **The Complete Solidity Course - Blockchain - Zero to Expert**
+    * [Acesse na Udemy](https://www.udemy.com/course/the-complete-solidity-course-blockchain-zero-to-expert/)
 ---
 
 ## 🚀 Bootcamps e Especializações
