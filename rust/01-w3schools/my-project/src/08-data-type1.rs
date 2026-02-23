@@ -9,4 +9,10 @@ fn main() {
     let my_letter = 'S';    // character
     let my_bool = true;     // boolean
     let my_text = "Hello";  // string
+
+    println!("my_num: {}", my_num);
+    println!("my_double: {}", my_double);
+    println!("my_letter: {}", my_letter);
+    println!("my_bool: {}", my_bool);
+    println!("my_text: {}", my_text);
 }
