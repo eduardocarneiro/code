@@ -32,6 +32,19 @@ Rust support many common operators, like:
 | %=          x %= 3      x = x % 3
 ----------------------------------------
 */
+//
+// Comparison Operators
+/*
+-------------------------------------------------
+| Operator    Meaning                     Example |
+| ==          Equal to                    x == y  |
+| !=          Not equal                   x != y  |
+| >           Greater than                x > y   |
+| <           Less than                   x < y   |
+| >=          Greater than or equal to    x >= y  |
+| <=          Less than or equal to       x <= y  |
+-------------------------------------------------
+*/
 
 fn main() {
     // Arithmetic Operators
@@ -65,6 +78,18 @@ fn main() {
 
     x %= 3;
     println!("X %= 3: {}", x); 
+    //
+    // Comparison Operators
+    let a = 5;
+    let b = 9;
+
+    println!("5 == 9: {}", a == b);
+    println!("5 != 9: {}", a != b);
+    println!("5 > 9: {}", a > b);
+    println!("5 < 9: {}", a < b);
+    println!("5 >= 9: {}", a >= b);
+    println!("5 <= 9: {}", a <= b);
+
 }
 
 
