@@ -45,6 +45,15 @@ Rust support many common operators, like:
 | <=          Less than or equal to       x <= y  |
 -------------------------------------------------
 */
+// Logical Operators
+/*
+-------------------------------------------------------------------------------
+| Operator    Name    Description                                               |
+| &&          AND     Returns true if both statements are true                  |
+| ||          OR      Returns true if one of the statements is true             |
+| !           NOT     Reverse the result, returns false if the result is true   |
+-------------------------------------------------------------------------------
+*/
 
 fn main() {
     // Arithmetic Operators
@@ -89,8 +98,17 @@ fn main() {
     println!("5 < 9: {}", a < b);
     println!("5 >= 9: {}", a >= b);
     println!("5 <= 9: {}", a <= b);
+    //
+    // Logical Operators
+    let logged_in = true;
+    let is_admin = false;
+
+    println!("Is regular user: {}", logged_in && !is_admin);
+    println!("Has any access: {}", logged_in || is_admin);
+    println!("Not logged in: {}", !logged_in);
 
 }
+
 
 
 
