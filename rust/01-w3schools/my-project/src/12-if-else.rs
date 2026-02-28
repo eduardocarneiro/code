@@ -44,4 +44,24 @@ fn main() {
     } else {
         println!("Grade: F");
     }
-}
+
+    // If as an Expression
+    /*
+    In Rust, If..else can also be used as an expression
+    This means you can assign the result of an "if" to a variable
+    
+    When using "if" as an expression, you must include "else". This ensures the result always has a value.
+    */
+    let time = 20;
+    let greeting = if time < 18 {
+        "Good day"
+    } else {
+        "Good evening"
+    };
+    println!("{}", greeting);
+
+    // Simplified syntax
+    let new_time = 17;
+    let new_greeting = if new_time < 18 {"Good Day."} else {"Good Evening."};
+    println!("{}", new_greeting);
+ }
