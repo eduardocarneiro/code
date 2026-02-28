@@ -64,4 +64,17 @@ fn main() {
     let new_time = 17;
     let new_greeting = if new_time < 18 {"Good Day."} else {"Good Evening."};
     println!("{}", new_greeting);
+
+    // Do not mix Types
+    /*
+    The value from "if" and "else", must be the same type.
+    When you mix types, like a string and integer, you will get an error.
+    */
+    /*
+        let number = 5;
+        let result = if number < 10 {"Too small"} else { 100 };
+        println!("{}", result);
+    */
+    // Result:
+    // error[E0308]: `if` and `else` have incompatible types
  }
