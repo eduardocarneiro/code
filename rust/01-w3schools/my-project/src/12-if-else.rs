@@ -29,4 +29,19 @@ fn main() {
     } else {
         println!("You are too young to vote");   
     }
+
+    // else if
+    // You can check multiple conditions using "else if"
+
+    let score = 77;
+
+    if score >= 90 {
+        println!("Grade: A");
+    } else if score >= 80 {
+        println!("Grade: B");
+    } else if score >= 70 {
+        println!("Grade: C");
+    } else {
+        println!("Grade: F");
+    }
 }
