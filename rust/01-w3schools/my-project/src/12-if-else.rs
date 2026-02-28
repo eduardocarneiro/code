@@ -20,4 +20,13 @@ fn main() {
         println!("10 is greater than 7");
     }
 
+    // if..else 
+    // If the condition is not true, you can use "else" to run different code:
+    let age = 16;
+
+    if age >= 16 {
+        println!("You can vote.");
+    } else {
+        println!("You are too young to vote");   
+    }
 }
