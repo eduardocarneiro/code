@@ -26,5 +26,18 @@ fn main() {
         }
         count += 1;
     }
+
+    // Return a value
+    let mut new_count = 1;
+    let result = loop {
+        println!("Hello world!!!");
+
+        if new_count == 3 {
+            break new_count;
+        }
+
+        new_count += 1;
+    };
+    println!("Result: {}", result);
 }
 
