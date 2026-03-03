@@ -25,4 +25,21 @@ fn main() {
         println!("Number is: {}", num);
         num += 1;
     }
+
+    // Skip a Value
+    /*
+    You can skip a value using "continue"
+    This example will print numbers from 1 to 10, except for the number 6
+    */
+
+    let mut new_num = 1;
+
+    while new_num <= 10 {
+       if new_num == 6 {
+            new_num += 1;
+            continue;
+       }
+       println!("new_number is: {}", new_num);
+       new_num += 1;
+    }
 }
