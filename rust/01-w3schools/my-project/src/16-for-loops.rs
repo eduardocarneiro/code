@@ -9,4 +9,10 @@ fn main() {
     for i in 1..6 {
         println!("i is: {}", i);
     }
+
+    // to include the last number, use "..="
+    for j in 1..=6 {
+        println!("j is: {}", j);
+    }
+
 }
