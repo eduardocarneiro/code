@@ -15,4 +15,16 @@ fn main() {
         println!("j is: {}", j);
     }
 
+    // Break and Continue
+    for k in 1..=10 {
+
+        if k == 3 {
+            continue;
+        }
+
+        if k == 5 {
+            break;
+        }
+        println!("k is: {}",  k);
+    }
 }
