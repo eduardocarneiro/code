@@ -20,6 +20,16 @@ fn say_hello() {
     println!("Hello from a function!");
 }
 
+// Function with Parameters
+/*
+You can send information into a function using parameters
+*/
+
+fn greet(name: &str) {
+    println!("Hello, {}!", name );
+}
+
 fn main () {
     say_hello(); 
+    greet("Dona Saroca!!!");
 }
