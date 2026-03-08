@@ -40,6 +40,16 @@ fn greet(name: &str) {
 fn do_sum(a: i32, b: i32) -> i32 {
     return a + b;
 }
+// end
+
+// Omit return keyword
+/*
+ - In Rust, you can omit the "return" keyword. Just write the value on the last line of the function, without a semicolon
+*/
+fn do_sum2(c: i32, d: i32) -> i32 {
+    c + d
+}
+
 
 fn main () {
     say_hello(); 
@@ -49,4 +59,8 @@ fn main () {
     let sum = do_sum(1, 3);
     println!("Sum is: {}", sum);
     // end
+    // sample "Omit return keyword"
+    let sum2 = do_sum2(3, 7);
+    println!("Sum2 is: {}", sum2);
 }
+
