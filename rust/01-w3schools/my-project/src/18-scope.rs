@@ -21,8 +21,19 @@ fn main() {
         let result = "Pass";
         println!("Result: {}", result);
     }
-
     // println!("Result: {}", result); // Error: not found in this scope
+
+    // variables in the same scope
+    /*
+    In Rust, you can declare a new variable with the same name in the same scope using "let". 
+    This is called "shadowing"
+    Code below will show some warning to compile the code
+    */
+
+    let x = 5;
+    let x = 10;
+
+    println!("X is {}", x); // prints 10
 }
 
 
