@@ -4,14 +4,25 @@
 */
 
 // variable inside a function
-fn myFunction() {
+fn my_function() {
     let message = "Hello!";
     println!("{}", message); // message variable can be accessed from here
 }
 
+
 fn main() {
-    myFunction();
+    my_function();
     // println!("{}", message); // rustc says: Not found in this scope
+
+    // variable inside a block
+    let score = 80;
+
+    if score > 50 {
+        let result = "Pass";
+        println!("Result: {}", result);
+    }
+
+    // println!("Result: {}", result); // Error: not found in this scope
 }
 
 
