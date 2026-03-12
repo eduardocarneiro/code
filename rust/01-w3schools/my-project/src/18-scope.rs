@@ -34,6 +34,16 @@ fn main() {
     let x = 10;
 
     println!("X is {}", x); // prints 10
+
+    // reuse variable name inside new block
+    let z = 5;
+    
+    {
+        let z = 11;
+        println!("Z inside a block is: {}", z); // prints 11
+    }
+    
+    println!("Z outside a block is: {}", z); // prints 5
 }
 
 
