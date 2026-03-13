@@ -17,6 +17,22 @@ fn main() {
 
     let text2 = String::from("Hello world!");
     println!("{}", text2);
+
+    // Change a String
+    /*
+    Strings are mutable, so you can change them if they are declared with "mut"
+    - Use "push_str()" to add text to a string
+    */
+
+    let mut greeting = String::from("Hello");
+    greeting.push_str(" World");
+    println!("{}", greeting); // Hello World
+
+    // to add one character use "push()"
+    let mut word = String::from("Hi");
+    word.push('!');
+    println!("{}", word); // Hi!
 }
+
 
 
