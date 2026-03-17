@@ -32,6 +32,17 @@ fn main() {
     let mut word = String::from("Hi");
     word.push('!');
     println!("{}", word); // Hi!
+
+    // Concatenate Strings
+    /*
+    Use "format!" macro to concatenate strings
+    */
+    let s1 = String::from("Hello");
+    let s2 = String::from("World");
+    let s3 = String::from("what a beautiful day!");
+
+    let result = format!("{} {} {}", s1, s2, s3);
+    println!("{}", result);
 }
 
 
