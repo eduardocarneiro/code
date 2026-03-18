@@ -52,6 +52,13 @@ fn main() {
     let s6 = String::from(" See you...");
     let result2 = s4 + " " + &s5 + " " + &s6;
     println!("{}", result2); 
+
+    // String Length
+    /*
+    You can use the ".len()" method to get the length of a string
+    */
+    let try1 = String::from("Sarocas");
+    println!("Length: {}", try1.len());
 }
 
 
