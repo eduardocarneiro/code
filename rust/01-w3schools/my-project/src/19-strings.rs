@@ -43,6 +43,15 @@ fn main() {
 
     let result = format!("{} {} {}", s1, s2, s3);
     println!("{}", result);
+
+    /*
+    You can also use the "+" operator to combine strings, but it can get messy with many values.
+    */
+    let s4 = String::from("Hi");
+    let s5 = String::from("There!!!");
+    let s6 = String::from(" See you...");
+    let result2 = s4 + " " + &s5 + " " + &s6;
+    println!("{}", result2); 
 }
 
 
