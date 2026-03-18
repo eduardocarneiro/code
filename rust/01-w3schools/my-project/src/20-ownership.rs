@@ -33,4 +33,23 @@ fn main() {
     println!("y: {}", y);
     println!("z: {}", z);
 
+    // Clone
+    /*
+    To keep the original value and also assign it to another varibale, use the ".clone()" method
+    */
+
+    let var1 = String::from("data from var1");
+    let var2 = var1.clone(); // both variables has the same value
+
+    println!("var1: {}", var1);
+    println!("var2: {}", var2);
+
 }
+
+/*
+Why ownership matters
+    - Rust uses ownership to automatically free memory when it's no longer needed
+    - It prevents bugs like using memory that's already been deleted
+    - It is one of the reasons Rust is so safe and fast
+
+*/
