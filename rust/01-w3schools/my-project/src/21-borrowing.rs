@@ -25,3 +25,14 @@ fn main() {
 
     println!("{}", name_ref);
 }
+
+/*
+NOTE: You can only have one mutable reference to a value at a time!
+
+Why Borrowing is important:
+
+Borrowing helps you reuse values safely, without giving them away.
+    - It lets you use values wihtout taking ownership
+    - It avoids cloning, which can be slow for large data
+    - It makes your programs safer and faster
+*/
