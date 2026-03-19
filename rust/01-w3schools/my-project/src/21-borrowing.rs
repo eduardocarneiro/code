@@ -14,4 +14,14 @@ fn main() {
 
     println!("A is: {}", a);
     println!("b is: {}", b);
+
+    // mutable references
+    /*
+     - If you want to change a value through a reference, you need to make the reference "mut"
+    */
+    let mut name = String::from("Sarah");
+    let name_ref = &mut name;
+    name_ref.push_str(" G. C.");
+
+    println!("{}", name_ref);
 }
