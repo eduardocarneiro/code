@@ -48,4 +48,4 @@ if two operators have the same precedence, the expression is evaluated from left
 example 
 - addition "+" and subtraction "-" has the same precedence, and therefor we evaluate the expression from left to right 
 """
-print(5 + 4 - 7 + 3)
+print(5 + 4 - 7 + 3
