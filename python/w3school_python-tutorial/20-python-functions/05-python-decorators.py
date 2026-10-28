@@ -161,9 +161,57 @@ print(fnc4())
 
 
 
+# preserving function metadata
+"""
+* functions in python has metadata that can be accessed using the "__name__" and "__doc__" attributes
+
+example:
+- normally, a function's name can be returned with the "__name__" attribute 
+"""
+def myfunc1():
+    return "have a great day!"
+
+print(myfunc1.__name__)
+
+
+"""
+* but, when a function is decorated, the metadata of the original function is lost 
+
+example:
+- try returning the name from a decorated function and you will not get the same result
+"""
+def changecase7(func):
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase7
+def myfunc2():
+    return "have a great day!"
+
+print(myfunc2.__name__)
 
 
 
+"""
+* to fix this, python has a built-in function called functools.wraps that can be used to preserve the original function's name and docstring 
+
+example:
+- import "functools.wraps" to preserve the original function name and docstring 
+"""
+import functools
+
+def changecase8(func):
+    @functools.wraps(func)
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase8
+def myfunc3():
+    return "have a great day"
+
+print(myfunc3.__name__)
 
 
 
