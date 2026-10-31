@@ -61,11 +61,9 @@ Below is an overview of the concepts and topics covered in each directory of thi
 2. Clone the repository:
    ```bash
    git clone https://github.com/eduardocarneiro/code.git
-
+    ```
 
 Navigate to any directory and run a script using:
-
-python <filename>.py
-
-
-
+    ```bash 
+    python <filename>.py
+    ```
