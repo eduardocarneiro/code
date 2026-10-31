@@ -62,8 +62,7 @@ Below is an overview of the concepts and topics covered in each directory of thi
    ```bash
    git clone https://github.com/eduardocarneiro/code.git
    ```
-
-Navigate to any directory and run a script using:
-```bash 
-python <filename>.py
-```
+3. Navigate to any directory and run a script using:
+   ```bash 
+   python <filename>.py
+   ```
