@@ -1,4 +1,7 @@
+from logging import raiseExceptions
+
 from fastapi import FastAPI
+from fastapi.exceptions import HTTPException
 
 app = FastAPI()
 
@@ -26,3 +29,17 @@ async def root():
 @app.get("/list-books")
 async def list_books():
     return {"books": BOOK_DATABASE}
+
+
+# /list-book-by-index/{index}
+@app.get("/list-book-by-index/{index}")
+async def list_book_by_index(index: int):
+    if index < 0 or index >= len(BOOK_DATABASE):
+        # https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+        raise HTTPException(404, 'Index out of range')
+    else:
+        return { "books": BOOK_DATABASE[index] }
+
+
+
+
