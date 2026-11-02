@@ -1,5 +1,3 @@
-from logging import raiseExceptions
-
 from fastapi import FastAPI
 from fastapi.exceptions import HTTPException
 import random
@@ -30,8 +28,7 @@ async def root():
 # /list-books 
 @app.get("/list-books")
 async def list_books():
-    return {"books": BOOK_DATABASE}
-
+    return {"books": BOOK_DATABASE} 
 
 # /list-book-by-index/{index}
 @app.get("/list-book-by-index/{index}")
@@ -48,4 +45,10 @@ async def list_book_by_index(index: int):
 async def get_random_book():
     return random.choice(BOOK_DATABASE)
 
+
+# /add-book                     -> adicionar novo livro
+@app.post("/add-book")
+async def add_book(book: str):
+    BOOK_DATABASE.append(book)
+    return { "message": f"Book {book} was added"}
 
