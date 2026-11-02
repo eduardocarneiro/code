@@ -2,6 +2,8 @@ from logging import raiseExceptions
 
 from fastapi import FastAPI
 from fastapi.exceptions import HTTPException
+import random
+
 
 app = FastAPI()
 
@@ -41,5 +43,9 @@ async def list_book_by_index(index: int):
         return { "books": BOOK_DATABASE[index] }
 
 
+# /get-random-book              -> livro aleatório
+@app.get("/get-random-book")
+async def get_random_book():
+    return random.choice(BOOK_DATABASE)
 
 
