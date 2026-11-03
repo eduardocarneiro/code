@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.exceptions import HTTPException
 import random
+from typing import Dict, List
+import os
+import json
 
 
 app = FastAPI()
@@ -12,6 +15,39 @@ app = FastAPI()
 # /add-book                     -> adicionar novo livro
 
 
+
+"""
+List and Add from json file 
+"""
+
+BOOK_DATABASE2 = [] 
+
+BOOKS_FILE = "books.json"
+
+if os.path.exists(BOOKS_FILE):
+    with open(BOOKS_FILE, "r") as f:
+        BOOK_DATABASE2 = json.load(f)
+
+
+# /list-books2 
+@app.get("/list-books2")
+async def list_books2():
+    return {"books": BOOK_DATABASE2}
+
+
+# /add-book2    -> add new bokk to json file 
+@app.post("/add-book2")
+async def add_book2(book: str):
+    BOOK_DATABASE2.append(book)
+    with open (BOOKS_FILE, "w") as f:
+        json.dump(BOOK_DATABASE2, f)
+    return { "message": f"The book {book} was added"}
+
+
+
+"""
+First example: list and add in memory
+"""
 BOOK_DATABASE = [
     "Harry Potter",
     "Lord of the rings",
@@ -52,3 +88,26 @@ async def add_book(book: str):
     BOOK_DATABASE.append(book)
     return { "message": f"Book {book} was added"}
 
+
+
+
+"""
+Some tests using type 
+"""
+# /check -> route created to do some tests 
+@app.get("/check")
+async def check():
+    result = { "books": BOOK_DATABASE}
+    print(type(result))
+    return result
+
+# /check2 -> route created to try dict definition
+@app.get("/check2")
+async def check2() -> dict:
+    return { "book": BOOK_DATABASE }
+
+# /check3 -> route created to try Dict[str, List[str]] method to specify the type of dict and list type 
+# need to import Dict and List as the command "from typing import Dict, List"
+@app.get("/check3")
+async def check3() -> Dict[str, List[str]]:
+    return { "book": BOOK_DATABASE }
